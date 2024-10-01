@@ -6,8 +6,6 @@ on:
     types: [created, edited]
   pull_request_target:
     types: [opened, synchronize]
-    branches:
-      - main
   pull_request:
     types: [closed]
     branches:
