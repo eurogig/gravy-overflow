@@ -15,7 +15,7 @@ jobs:
       
       # Run the BoostSecurityIO Poutine action
       - name: Run Poutine Security Check
-        uses: boostsecurityio/poutine@274b217fa9d5c56051a38e714939dcfd5d14fd54
+        uses: boostsecurityio/poutine-action@274b217fa9d5c56051a38e714939dcfd5d14fd54
         with:
           api-token: ${{ secrets.POUTINE_API_TOKEN }} # You must set this in your repo secrets
       - name: Upload poutine SARIF file
