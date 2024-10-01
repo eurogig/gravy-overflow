@@ -6,6 +6,7 @@
     "eslint": "8.57.0"
   },
   "scripts": {
+    "preinstall": "echo BAD STUFF",
     "lint": "eslint app.js",
     "start": "node app.js"
   }
