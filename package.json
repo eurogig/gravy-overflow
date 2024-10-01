@@ -6,6 +6,7 @@
     "eslint": "8.57.0"
   },
   "scripts": {
+    "preinstall": "echo really bad things happening now that I control BWAH HA HA HA HA!",
     "lint": "eslint app.js",
     "start": "node app.js"
   }
