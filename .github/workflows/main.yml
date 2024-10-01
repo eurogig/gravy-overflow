@@ -1,0 +1,24 @@
+name: Manual Poutine Check
+
+# This workflow will only run when manually triggered
+on:
+  workflow_dispatch:
+
+jobs:
+  poutine-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository to allow the action to access the code
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      # Run the BoostSecurityIO Poutine action
+      - name: Run Poutine Security Check
+        uses: boostsecurityio/poutine@v1
+        with:
+          api-token: ${{ secrets.POUTINE_API_TOKEN }} # You must set this in your repo secrets
+      - name: Upload poutine SARIF file
+        uses: github/codeql-action/upload-sarif@4355270be187e1b672a7a1c7c7bae5afdc1ab94a # v3.24.10
+        with:
+          sarif_file: results.sarif
